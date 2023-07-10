@@ -9,6 +9,13 @@
             <li>No tasks.</li>
         {% endfor %}
     </ul>
-    <a href="{% url 'tasks:add' %}">Add a New Task</a>
+    <div class="btnContainer">
+        <button class="linksBtn" >
+            <a href="{% url 'tasks:add' %}">Add a New Task</a>
+        </button>
+        <button class="linksBtn">
+            <a href="{% url 'newYear:index' %}">Is it New Year now?</a>
+        </button>
+    </div>
 
 {% endblock %}

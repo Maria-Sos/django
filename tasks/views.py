@@ -6,7 +6,15 @@ from django.urls import reverse
 # Create your views here.
 
 class NewTasksForm(forms.Form):
-    task = forms.CharField(label="New Task")
+    task = forms.CharField(label="New Task", 
+                           widget=forms.TextInput(attrs={'style': 
+                                                         'width: 600px;' 
+                                                         'border-radius: 17px;'
+                                                         'padding: 10px;'
+                                                         'marging: 0px 0px 15px;'
+                                                         'font-family: sans-serif'
+                                                         'font-size: 15px;'
+                                                         }))
     # priority = forms.IntegerField(label="Priority", min_value=1, max_value=10)
 
 def index(request):

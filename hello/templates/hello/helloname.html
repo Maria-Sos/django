@@ -1,11 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello</title>
+    <link href="{% static 'hello/styles.css' %}" rel="stylesheet">
 </head>
 <body>
-    <h1>Hello {{ name }}!</h1>
+    <h1>Hello <span>{{ name }}</span>!</h1>
+    <div class="btnContainer">
+    <button class="linksBtn">
+        <a href="{% url 'tasks:index' %}">Create task list</a>
+    </button>
+    <button class="linksBtn">
+        <a href="{% url 'newYear:index' %}">Is it New Year now?</a>
+    </button>
+</div>
 </body>
 </html>
