@@ -1,11 +1,19 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hello app</title>
+    <link href="{% static 'hello/styles.css' %}" rel="stylesheet">
 </head>
 <body>
     <h1>Hello world!</h1>
+    <p style=" font-family: sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(39, 2, 38);">Add your name in url after the main url like: 
+        <span style="text-decoration:underline;">main url/YOUR_NAME</span>
+    </p>
 </body>
 </html>
